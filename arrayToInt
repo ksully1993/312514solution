@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Converts pre-set integers values, in an array, to a useable integer value. 
+// Converts pre-set integers values, in an array, to a concatenated integer value. 
 
 int main(void)
 {
