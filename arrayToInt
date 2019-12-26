@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Converts pre-set integers values, in an array, to a useable integer value. 
+
+int main(void)
+{
+    int originalValues[] = {3,12,5,14};
+    int newDigits[6] = {0};
+	int j = 0;
+	int temp = 0, temp2 = 0;
+    for(int i = 0; i < sizeof(originalValues)/sizeof(int); i++){
+
+        if(originalValues[i] < 10){
+            temp = originalValues[i];
+			newDigits[j] = temp;
+			j++;
+            }
+        else{
+            temp2 = originalValues[i] / 10;
+			newDigits[j] = temp2;
+			j++;
+            temp2 = originalValues[i] % 10;
+			newDigits[j] = temp2;
+            j++;
+        }
+    }
+
+    int result = 0;
+
+    for(int temp3 = 0; temp3 < sizeof(newDigits)/sizeof(int); temp3++){
+        result *= 10;
+        result += newDigits[temp3];
+    }
+
+    printf("result = %d\n", result);
+
+}
